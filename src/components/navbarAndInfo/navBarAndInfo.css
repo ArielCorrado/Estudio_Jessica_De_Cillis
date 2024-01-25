@@ -1,0 +1,60 @@
+.navBar_navBarInfo_Cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navBar-height);
+}
+
+.navBarInfo_Cont {
+    height: 63%;
+    background-color: var(--color-web-1);
+    justify-content: space-around;
+    padding: 0 2rem;
+}
+
+.navBarInfo_Logo_Cont {
+    height: 100%;
+}
+
+.logoNavBar {
+    height: 80%;
+}
+
+.navBarInfo_Info_Cont {
+    height: 100%;
+}
+
+.navBarInfo_Info_Large_Text {
+    font-size: 1rem;
+}
+
+.navBarInfo_Info_Small_Text {
+    padding-left: 1.5rem;
+    font-weight: 200;
+}
+
+.navBar_Info_Schedule_Cont, .navBar_Info_Contact_Cont {
+    height: max-content;
+    padding: 0 1rem;
+    align-items: flex-start;
+    border-right: 1px solid var(--navBar-border-lines-color);
+}
+
+/* .navBar_Info_Contact_Cont  {
+
+} */
+
+.navBar_Info_Networks_Cont {
+    padding: 0 1rem;
+}
+
+.navBar_icons {
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.navBar_Cont {
+    height: 37%;
+    background-color: var(--color-web-2);
+}

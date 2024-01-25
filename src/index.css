@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* font-family: 'Poppins', sans-serif; */
 
-
 :root {
-    --color-web-1: #0d1321;
-    --color-web-2: #1D2D44;
-    --color-web-3: #3E5C76;
-    --color-web-4: #748CAB;
-    --color-web-5: #d6d6d6;
-    --color-web-6: #ffffff;
-
+    --color-web-1: #282E3F;
+    --color-web-2: #333A4D;
+    --color-web-3: #BF884E;
+    --color-web-4: #CF9455;
+ 
     --font-style-principal: 'Poppins', sans-serif;
-    --text-light-color: rgb(134, 83, 83);
+    --text-light-color: rgb(255, 255, 255);
+
+    --navBar-height: 6rem;
+    --navBar-border-lines-color: #3f4555;
+    --color-navbar-hover: #d19f6a;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: 0.15rem;
     line-height: 1.2;
     font-weight: 300;
     list-style: none;
@@ -72,12 +72,12 @@ a {
 
 @media only screen and (orientation: landscape) {
     html {
-        font-size: calc(1vh + 16px);
+        font-size: calc(1vh + 14px);
     }
 }
 
 @media only screen and (orientation: portrait) {
     html {
-        font-size: calc(1vw + 16px);
+        font-size: calc(1vw + 14px);
     }
 }

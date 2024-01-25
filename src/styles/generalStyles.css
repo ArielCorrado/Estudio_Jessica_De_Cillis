@@ -1,0 +1,48 @@
+.seccionToWaitImages {
+    opacity: 0;
+}
+
+.opacityOnCharge {
+    animation-name: opacityOnCharge;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
+}
+
+@keyframes opacityOnCharge {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/********************************** OoS ********************************/
+
+.OoS {
+    opacity: 0;
+}
+
+.OoSS {
+    animation-name: animationOfScroll; 
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationOfScroll {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/******************************************************/
+
+.icon_invert {
+    filter: invert(100%);
+}
