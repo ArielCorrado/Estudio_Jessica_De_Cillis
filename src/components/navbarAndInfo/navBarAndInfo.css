@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     height: var(--navBar-height);
+    z-index: 1000;
 }
 
 .navBarInfo_Cont {
@@ -57,4 +58,15 @@
 .navBar_Cont {
     height: 37%;
     background-color: var(--color-web-2);
+}
+
+@media only screen and (orientation: portrait) {
+
+    .navBar_Info_Networks_Cont, .navBar_Info_Schedule_Cont {
+        display: none;
+    }
+
+    .navBar_Info_Contact_Cont {
+        border-right: none;
+    }
 }
