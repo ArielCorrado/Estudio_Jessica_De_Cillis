@@ -33,10 +33,58 @@ const CarouselZoom = () => {
 
     return (
         <div className='contImgHome flex' ref={contImgHome} id="inicio">
-            <img src="/images/carousel/1.jpg" alt="" className='imgHome'/> 
-            <img src="/images/carousel/2.jpg" alt="" className='imgHome'/> 
-            <img src="/images/carousel/3.jpg" alt="" className='imgHome'/> 
-            <img src="/images/carousel/4.jpg" alt="" className='imgHome'/> 
+            <div className='imgHomeCont flex'>
+                <img src="/images/carousel/1.jpg" alt="Carousel" className='imgHome'/> 
+                <div className='imgHomeTextCont flex column'>
+                    <div className='imgHomeText1Cont flex column'>
+                        <div className='flex column'>
+                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
+                            <p className='imgHomeText1'>Abogados Nación</p>
+                        </div>
+                        <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
+                    </div>
+                    <p className='imgHomeText2'>Somos especialistas <br /> en derecho penal</p>
+                </div>
+            </div>
+            <div className='imgHomeCont flex'>
+                <img src="/images/carousel/2.jpg" alt="Carousel" className='imgHome'/> 
+                <div className='imgHomeTextCont flex column'>
+                    <div className='imgHomeText1Cont flex column'>
+                        <div className='flex column'>
+                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
+                            <p className='imgHomeText1'>Abogados Nación</p>
+                        </div>
+                        <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
+                    </div>
+                    <p className='imgHomeText2'>Somos especialistas <br /> en derecho penal</p>
+                </div>
+            </div>
+            <div className='imgHomeCont flex'>
+                <img src="/images/carousel/3.jpg" alt="Carousel" className='imgHome'/> 
+                <div className='imgHomeTextCont flex column'>
+                    <div className='imgHomeText1Cont flex column'>
+                        <div className='flex column'>
+                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
+                            <p className='imgHomeText1'>Abogados Nación</p>
+                        </div>
+                        <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
+                    </div>
+                    <p className='imgHomeText2'>Somos especialistas <br /> en derecho penal</p>
+                </div>
+            </div>
+            <div className='imgHomeCont flex'>
+                <img src="/images/carousel/4.jpg" alt="Carousel" className='imgHome'/> 
+                <div className='imgHomeTextCont flex column'>
+                    <div className='imgHomeText1Cont flex column'>
+                        <div className='flex column'>
+                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
+                            <p className='imgHomeText1'>Abogados Nación</p>
+                        </div>
+                        <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
+                    </div>
+                    <p className='imgHomeText2'>Somos especialistas <br /> en derecho penal</p>
+                </div>
+            </div>
         </div>
     );
 }

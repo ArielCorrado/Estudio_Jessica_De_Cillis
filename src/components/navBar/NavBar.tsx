@@ -197,9 +197,9 @@ const NavBar = () => {
             <div className="tapaMenu"></div>
             <div className="menu flex">
                 <Link className="opcion firstOption flex" to="/home">Home</Link>
-                <Link className="opcion flex" to="/nosotros">Nosotros</Link>
-                <Link className="opcion flex" to="/contacto">Contacto</Link>
-                <Link className="opcion flex" to="/preguntas">Preguntas frecuentes</Link>
+                <Link className="opcion flex" to="/home">Nosotros</Link>
+                <Link className="opcion flex" to="/home">Contacto</Link>
+                <Link className="opcion flex" to="/home">Preguntas frecuentes</Link>
             </div>
         </div>
     )  

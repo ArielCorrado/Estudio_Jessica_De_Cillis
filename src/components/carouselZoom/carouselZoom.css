@@ -6,19 +6,59 @@
     background-color: rgba(0, 0, 0, 0.918);
 }
 
-.imgHome {
+.imgHomeCont {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     opacity: 0; 
-    position: absolute;
     transition-duration: 2s;
     transition-property: opacity;                             
     transition-timing-function: ease-out;
     animation-duration: 16s;                             /*Tiempo de zoom de cada imagen (en el .jsx el setTimeout de la funcion carousel tiene que ser 1 segundo menos si el tiempo de cambio de opacidad es 1s)*/
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    filter: grayscale(25%) contrast(80%);
+}
+
+.imgHome {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(35%) contrast(70%) brightness(70%);
+}
+
+.imgHomeTextCont {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.imgHomeText1Cont {
+    margin-bottom: 2rem;
+}
+
+.imgHomeLogo {
+    height: 4rem;
+    filter: brightness(90%);
+}
+
+.imgHomeText1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.imgHomeText2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.imgHomeLine {
+    margin-top: 0.5rem;
+    width: 12rem;
+    filter: invert(75%);
 }
 
 .zoomIn {
@@ -38,6 +78,7 @@
         transform: scale(125%);
     }
 }
+
 
 
 
