@@ -1,7 +1,10 @@
+import "./home.css";
+import CarouselZoom from "../../components/carouselZoom/CarouselZoom";
+
 function Home() {
     return (
-        <div>
-            Home
+        <div className="home">
+            <CarouselZoom/>
         </div>
     )
 }
