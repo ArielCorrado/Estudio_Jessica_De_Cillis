@@ -44,7 +44,7 @@ const CarouselZoom = () => {
                 <div className='imgHomeTextCont flex column'>
                     <div className='imgHomeText1Cont flex column'>
                         <div className='flex column'>
-                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
+                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo logoAdjust'/>
                             <p className='imgHomeText1'>Abogados Nación</p>
                         </div>
                         <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />

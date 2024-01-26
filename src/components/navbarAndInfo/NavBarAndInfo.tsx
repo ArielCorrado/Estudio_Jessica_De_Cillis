@@ -22,7 +22,7 @@ function NavBarAndInfo () {
         <div className="navBar_navBarInfo_Cont opacityOnCharge">
             <div className="navBarInfo_Cont flex">
                 <div className="navBarInfo_Logo_Cont flex">
-                    <img src="/images/logos/logo1.png" alt="Logo" className="logoNavBar"/>
+                    <img src="/images/logos/logo1.png" alt="Logo" className="logoNavBar logoAdjust"/>
                 </div>
                 <div className="navBarInfo_Info_Cont flex">
                     <div className="navBar_Info_Schedule_Cont flex column">
