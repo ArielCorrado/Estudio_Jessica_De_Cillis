@@ -1,12 +1,16 @@
 import "./homeConcerns.css";
 import HomeConcernsCard from "../homeConcernsCard/HomeConcernsCard";
-import { useEffect, useState } from "react";
+import { useState, useRef } from "react";
+
+type CardsInfo = {
+    imgPath: string,
+    mainText: string,
+    secondaryText: string,
+}[]
 
 export default function HomeConcerns() {
-
-    const [cards, setCards] = useState <JSX.Element[]> ([]);
-
-    const cardsInfo = [
+    
+    const cardsInfo = useRef([
         {
             imgPath: "/images/concerns/1.jpg",
             mainText: "Violencia de género",
@@ -22,20 +26,15 @@ export default function HomeConcerns() {
             mainText: "Robos",
             secondaryText: "robos"
         },
-    ]
-    
-    useEffect(() => {
-        const cardsAux = cardsInfo.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
-        setCards(cardsAux);
-        // eslint-disable-next-line
-    }, [])
-    
+    ]);
 
+    const [cards, setCards] = useState <JSX.Element[]> (cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>));
+  
     const next = () => {
-        cardsInfo.push(cardsInfo[0]);
-        const cardsAux = cardsInfo.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
+        cardsInfo.current.push(cardsInfo.current[0]);
+        const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
         setCards(cardsAux);
-                
+                      
         const homeConcernsCards_cont = document.querySelector(".homeConcernsCards_cont");
         homeConcernsCards_cont?.classList.add("moveToLeft");
 
@@ -43,15 +42,20 @@ export default function HomeConcerns() {
         const animation: Animation = cardsAnimation![0];
         
         const removeElement = () => {
-            homeConcernsCards_cont?.classList.remove("moveToLeft");
-            cardsInfo.shift();
-            homeConcernsCards_cont?.childNodes[0].remove()
-            // const cardsAux = cardsInfo.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
+            cardsInfo.current.shift();
+            const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
             setCards(cardsAux);
-            animation.removeEventListener("finish", removeElement)
-        }
+            // setCards((prevState) => {
+            //     const newState = [...prevState];    
+            //     newState.shift();
+            //     return newState;
+            // });
 
-        animation.addEventListener("finish", removeElement)
+            homeConcernsCards_cont?.classList.remove("moveToLeft");
+            animation.removeEventListener("finish", removeElement);
+        }
+        
+        animation.addEventListener("finish", removeElement);
     }
       
     return (
