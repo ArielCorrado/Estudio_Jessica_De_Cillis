@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&display=swap') /*font-family: 'Dynalight', cursive; */;
 
 :root {
     --color-web-1: #282E3F;
@@ -8,10 +9,15 @@
  
     --font-style-principal: 'Poppins', sans-serif;
     --text-light-color: rgb(255, 255, 255);
+    --text-dark-color: var(--color-web-1);
 
     --navBar-height: 6rem;
     --navBar-border-lines-color: #3f4555;
     --color-navbar-hover: #d19f6a;
+
+    --concerns-cards-width: 15rem;
+    --concerns-cards-height: 15rem;
+    --concerns-cards-margin: 2rem;
 }
 
 * {
