@@ -1,12 +1,12 @@
 import "./homeConcerns.css";
 import HomeConcernsCard from "../homeConcernsCard/HomeConcernsCard";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 export default function HomeConcerns() {
 
     const enter = useRef (true)
     const addClasses = useRef (false);
-    const directionRef = useRef ("");
+    const intervalIdRef = useRef <NodeJS.Timer | undefined> (undefined);
     
     const cardsInfo = useRef([
         {
@@ -25,40 +25,38 @@ export default function HomeConcerns() {
             secondaryText: "robos"
         },
     ]);
-
-    const [cards, setCards] = useState <JSX.Element[]> (cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>));
   
-    const handleMove = (direction: string) => {
+    const handleMove = (direction: string, manual: boolean) => {
+        if (manual) clearInterval(intervalIdRef.current);
         if (enter.current) {
             enter.current = false;
 
             const homeConcernsCards_cont: HTMLDivElement | null = document.querySelector(".homeConcernsCards_cont");
-            directionRef.current = direction;
-            
+                     
             if (direction === "left") homeConcernsCards_cont!.style.justifyContent = "flex-start";
             if (direction === "right") homeConcernsCards_cont!.style.justifyContent = "flex-end";
             
-            if (direction === "left") cardsInfo.current.push(cardsInfo.current[0]);
-            if (direction === "right") cardsInfo.current.unshift(cardsInfo.current[cardsInfo.current.length - 1]);
-
-            const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
-            addClasses.current = true;
-            setCards(cardsAux);
+            if (direction === "left") homeConcernsCards_cont?.appendChild(homeConcernsCards_cont.childNodes[0].cloneNode(true));
+            if (direction === "right") homeConcernsCards_cont?.insertBefore(homeConcernsCards_cont.childNodes[homeConcernsCards_cont.childNodes.length -1].cloneNode(true), homeConcernsCards_cont.firstChild);
                                     
             if (direction === "left") homeConcernsCards_cont?.classList.add("moveToLeft");
             if (direction === "right") homeConcernsCards_cont?.classList.add("moveToRight");
 
             const cardsAnimation = homeConcernsCards_cont?.getAnimations();
             const animation: Animation = cardsAnimation![0];
+
+            const homeConcernsCards_contArr = Array.from(homeConcernsCards_cont!.childNodes) as HTMLDivElement[]
+            
+            if (direction === "left") homeConcernsCards_contArr[0].classList.add("opacityOff");
+            if (direction === "left") homeConcernsCards_contArr[homeConcernsCards_contArr.length - 1].classList.add("opacityOn");
+            if (direction === "right") homeConcernsCards_contArr[homeConcernsCards_contArr.length - 1].classList.add("opacityOff");
+            if (direction === "right") homeConcernsCards_contArr[0].classList.add("opacityOn");
             
             const removeElement = () => {
                 const homeConcernsCards_cont: HTMLDivElement | null = document.querySelector(".homeConcernsCards_cont");
-                if (direction === "left") cardsInfo.current.shift();
-                if (direction === "right") cardsInfo.current.pop();
-                const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
+               
                 addClasses.current = false;
-                setCards(cardsAux);
-
+           
                 if (direction === "left") homeConcernsCards_cont?.childNodes[0].remove();
                 if (direction === "right") homeConcernsCards_cont?.childNodes[homeConcernsCards_cont?.childNodes.length - 1].remove();
 
@@ -75,35 +73,57 @@ export default function HomeConcerns() {
 
                 enter.current = true;
             }
-        
+
             animation.addEventListener("finish", removeElement);
+                               
         }
     }
 
     useEffect(() => {
-        if (addClasses.current) {
-            const homeConcernsCards_cont = document.querySelector(".homeConcernsCards_cont");
-            const cardsList = homeConcernsCards_cont?.childNodes as NodeListOf<HTMLDivElement>;
-           
-            if (directionRef.current === "left") cardsList[0].classList.add("opacityOff");
-            if (directionRef.current === "left") cardsList[cardsList.length - 1].classList.add("opacityOn");
-            if (directionRef.current === "right") cardsList[cardsList.length -1].classList.add("opacityOff");
-            if (directionRef.current === "right") cardsList[0].classList.add("opacityOn");
+        intervalIdRef.current = setInterval(() => {
+            handleMove("right", false)
+        },5000)
+        
+        /****************************** Eventos Touch ****************************/
+
+        let startX: number;
+        let endX: number;
+        const elemento: HTMLElement | null = document.querySelector(".homeConcernsCards_cont");
+
+        const start = (e: TouchEvent) => {
+            startX = e.touches[0].clientX;
         }
-    }, [cards])
-    
-      
+
+        const end = (e: TouchEvent) => {
+            endX = e.changedTouches[0].clientX;
+            const Ax = endX - startX;
+            if (Ax > 10) {
+                handleMove("right", true);
+            } else if (Ax < -10) {
+                handleMove("left", true);
+            }
+        }
+
+        elemento?.addEventListener("touchstart", start);
+        elemento?.addEventListener("touchend", end);
+
+        /**************************************************************************/
+
+        return () => clearInterval(intervalIdRef.current);  
+
+    }, [])
+                 
     return (
         <div className="homeConcernsCont flex column">
             <img src="/images/concerns/bg.jpg" alt="Background" className="homeConcernsCont_bg"/>
-            <h2 className="homeConcernsCont_title"> <span className="homeConcernsCont_title_color">Lorem ipsum dolor sit,</span> amet consectetur adipisicing elit.</h2>
+            <h2 className="homeConcernsCont_title"> <span className="homeConcernsCont_title_color">Lorem ipsum dolor sit,</span> amet consectetur.</h2>
             <h3 className="homeConcernsCont_subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
             <div className="homeConcernsCards_cont flex">
-                {cards}
+                { cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>) }
             </div>
             <div className="homeConcernsCont_controls_cont flex">
-                <div className="homeConcernsCont_control" onClick={() => handleMove("right")}>{"<"}</div>
-                <div className="homeConcernsCont_control" onClick={() => handleMove("left")}>{">"}</div>
+                <div className="homeConcernsCont_control" onClick={() => handleMove("right", true)}>{"<"}</div>
+                <div className="homeConcernsCont_control" onClick={() => handleMove("left", true)}>{">"}</div>
             </div>
         </div>
     )

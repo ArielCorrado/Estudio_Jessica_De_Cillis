@@ -3,6 +3,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    padding-top: 2rem;
 }
 
 .homeConcernsCont_bg {
@@ -11,7 +12,7 @@
     height: 100%;
     object-fit: cover;
     object-position: top left;
-    filter: opacity(35%) sepia(100%) grayscale(50%) contrast(75%);
+    filter: opacity(25%) sepia(100%) grayscale(75%) contrast(75%);
     top:0;
     left: 0;
     width: 100%;
@@ -21,7 +22,7 @@
 
 .homeConcernsCont_title, .homeConcernsCont_title_color {
     color: var(--text-dark-color);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -46,6 +47,7 @@
     font-weight: 600;
     font-size: 3.5rem;
     margin: 2rem 3rem;
+    margin-bottom: 0;
     cursor: pointer;
 }
 
@@ -113,4 +115,11 @@
     100% {
         opacity: 0;;
     } 
+}
+
+@media only screen and (orientation: portrait) {
+
+    .homeConcernsCont_bg {
+        object-position: right top;
+    }
 }
