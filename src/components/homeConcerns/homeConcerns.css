@@ -64,3 +64,53 @@
         transform: translateX(calc(var(--concerns-cards-width) * -1 - calc(var(--concerns-cards-margin) * 2)));
     } 
 }
+
+.moveToRight {
+    animation-name: moveToRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateY(0);
+    } 
+    100% {
+        transform: translateX(calc(var(--concerns-cards-width) + calc(var(--concerns-cards-margin) * 2)));
+    } 
+}
+
+.opacityOn {
+    animation-name: opacityOn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;;
+    } 
+}
+
+.opacityOff {
+    animation-name: opacityOff;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes opacityOff {
+    0% {
+        opacity: 1;
+    } 
+    100% {
+        opacity: 0;;
+    } 
+}

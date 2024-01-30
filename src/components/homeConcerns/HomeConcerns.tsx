@@ -1,14 +1,12 @@
 import "./homeConcerns.css";
 import HomeConcernsCard from "../homeConcernsCard/HomeConcernsCard";
-import { useState, useRef } from "react";
-
-type CardsInfo = {
-    imgPath: string,
-    mainText: string,
-    secondaryText: string,
-}[]
+import { useState, useRef, useEffect } from "react";
 
 export default function HomeConcerns() {
+
+    const enter = useRef (true)
+    const addClasses = useRef (false);
+    const directionRef = useRef ("");
     
     const cardsInfo = useRef([
         {
@@ -30,33 +28,69 @@ export default function HomeConcerns() {
 
     const [cards, setCards] = useState <JSX.Element[]> (cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>));
   
-    const next = () => {
-        cardsInfo.current.push(cardsInfo.current[0]);
-        const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
-        setCards(cardsAux);
-                      
-        const homeConcernsCards_cont = document.querySelector(".homeConcernsCards_cont");
-        homeConcernsCards_cont?.classList.add("moveToLeft");
+    const handleMove = (direction: string) => {
+        if (enter.current) {
+            enter.current = false;
 
-        const cardsAnimation = homeConcernsCards_cont?.getAnimations();
-        const animation: Animation = cardsAnimation![0];
-        
-        const removeElement = () => {
-            cardsInfo.current.shift();
+            const homeConcernsCards_cont: HTMLDivElement | null = document.querySelector(".homeConcernsCards_cont");
+            directionRef.current = direction;
+            
+            if (direction === "left") homeConcernsCards_cont!.style.justifyContent = "flex-start";
+            if (direction === "right") homeConcernsCards_cont!.style.justifyContent = "flex-end";
+            
+            if (direction === "left") cardsInfo.current.push(cardsInfo.current[0]);
+            if (direction === "right") cardsInfo.current.unshift(cardsInfo.current[cardsInfo.current.length - 1]);
+
             const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
+            addClasses.current = true;
             setCards(cardsAux);
-            // setCards((prevState) => {
-            //     const newState = [...prevState];    
-            //     newState.shift();
-            //     return newState;
-            // });
+                                    
+            if (direction === "left") homeConcernsCards_cont?.classList.add("moveToLeft");
+            if (direction === "right") homeConcernsCards_cont?.classList.add("moveToRight");
 
-            homeConcernsCards_cont?.classList.remove("moveToLeft");
-            animation.removeEventListener("finish", removeElement);
-        }
+            const cardsAnimation = homeConcernsCards_cont?.getAnimations();
+            const animation: Animation = cardsAnimation![0];
+            
+            const removeElement = () => {
+                if (direction === "left") cardsInfo.current.shift();
+                if (direction === "right") cardsInfo.current.pop();
+                const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
+                addClasses.current = false;
+                setCards(cardsAux);
+
+                if (direction === "left") homeConcernsCards_cont?.childNodes[0].remove();
+                if (direction === "right") homeConcernsCards_cont?.childNodes[homeConcernsCards_cont?.childNodes.length - 1].remove();
+
+                homeConcernsCards_cont?.classList.remove("moveToLeft");
+                homeConcernsCards_cont?.classList.remove("moveToRight");
+                animation.removeEventListener("finish", removeElement);
+                const cardsList = homeConcernsCards_cont?.childNodes as NodeListOf<HTMLDivElement>;
+
+                if (direction === "left") cardsList[0].classList.remove("opacityOff");
+                if (direction === "left") cardsList[cardsList.length - 1].classList.remove("opacityOn")
+
+                if (direction === "right") cardsList[cardsList.length - 1].classList.remove("opacityOn");
+                if (direction === "right") cardsList[0].classList.remove("opacityOff")
+
+                enter.current = true;
+            }
         
-        animation.addEventListener("finish", removeElement);
+            animation.addEventListener("finish", removeElement);
+        }
     }
+
+    useEffect(() => {
+        if (addClasses.current) {
+            const homeConcernsCards_cont = document.querySelector(".homeConcernsCards_cont");
+            const cardsList = homeConcernsCards_cont?.childNodes as NodeListOf<HTMLDivElement>;
+           
+            if (directionRef.current === "left") cardsList[0].classList.add("opacityOff");
+            if (directionRef.current === "left") cardsList[cardsList.length - 1].classList.add("opacityOn");
+            if (directionRef.current === "right") cardsList[cardsList.length -1].classList.add("opacityOff");
+            if (directionRef.current === "right") cardsList[0].classList.add("opacityOn");
+        }
+    }, [cards])
+    
       
     return (
         <div className="homeConcernsCont flex column">
@@ -67,8 +101,8 @@ export default function HomeConcerns() {
                 {cards}
             </div>
             <div className="homeConcernsCont_controls_cont flex">
-                <div className="homeConcernsCont_control">{"<"}</div>
-                <div className="homeConcernsCont_control" onClick={next}>{">"}</div>
+                <div className="homeConcernsCont_control" onClick={() => handleMove("right")}>{"<"}</div>
+                <div className="homeConcernsCont_control" onClick={() => handleMove("left")}>{">"}</div>
             </div>
         </div>
     )
