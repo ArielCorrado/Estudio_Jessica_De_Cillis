@@ -52,6 +52,7 @@ export default function HomeConcerns() {
             const animation: Animation = cardsAnimation![0];
             
             const removeElement = () => {
+                const homeConcernsCards_cont: HTMLDivElement | null = document.querySelector(".homeConcernsCards_cont");
                 if (direction === "left") cardsInfo.current.shift();
                 if (direction === "right") cardsInfo.current.pop();
                 const cardsAux = cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>);
