@@ -1,11 +1,12 @@
-import React from 'react';
 import "./carouselZoom.css";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const CarouselZoom = () => {
      
-    const contImgHome = useRef ();                       /*Efecto zoom de imagenes en portada de Home. Trabaja junto con CSS: .contImgHome .imgHome @keyframes zoomHome */
+    const contImgHome = useRef <HTMLDivElement | null> (null);                       /*Efecto zoom de imagenes en portada de Home. Trabaja junto con CSS: .contImgHome .imgHome @keyframes zoomHome */
     useEffect(() => {
+        if (!contImgHome.current) return;
+              
         const imgs = contImgHome.current.querySelectorAll(".imgHome");
         const texts = contImgHome.current.querySelectorAll(".imgHomeTextCont");
         let i = 0;
@@ -32,8 +33,8 @@ const CarouselZoom = () => {
             setTimeout(() => {
                 carousel();
             }, 14000);
-        }
-        carousel()
+        };
+        carousel();
     
     }, []);
 
@@ -93,6 +94,6 @@ const CarouselZoom = () => {
             </div>
         </div>
     );
-}
+};
 
 export default CarouselZoom;

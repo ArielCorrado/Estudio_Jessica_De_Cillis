@@ -10,13 +10,13 @@ function NavBarAndInfo () {
             const navBarInfo_Logo_Cont_LEFT = logoNavBar?.getBoundingClientRect().left;
             const contMenu = document.querySelector(".contMenu") as HTMLDivElement;
             contMenu.style.paddingLeft = navBarInfo_Logo_Cont_LEFT + "px";
-        }
+        };
         adjustPaddingNavBar();
         window.addEventListener("resize", adjustPaddingNavBar);
         window.addEventListener("orientationchange", adjustPaddingNavBar);
         window.addEventListener("scroll", adjustPaddingNavBar);
         window.addEventListener("load", adjustPaddingNavBar);
-    }, [])
+    }, []);
     
     return (
         <div className="navBar_navBarInfo_Cont opacityOnCharge">
@@ -51,7 +51,7 @@ function NavBarAndInfo () {
                 <NavBar/>
             </div>
         </div>
-    )
+    );
 }
 
-export default NavBarAndInfo
+export default NavBarAndInfo;

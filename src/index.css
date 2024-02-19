@@ -18,6 +18,8 @@
     --concerns-cards-width: 15rem;
     --concerns-cards-height: 15rem;
     --concerns-cards-margin: 2rem;
+
+    --footer-border-lines-color: #303441;
 }
 
 * {

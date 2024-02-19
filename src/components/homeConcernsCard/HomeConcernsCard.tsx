@@ -9,5 +9,5 @@ export default function HomeConcernsCard (props: {imgPath: string, mainText: str
                 <p className="homeConcernsCard_secondaryText">{props.secondaryText}</p>
             </div>
         </div>
-    )
+    );
 }

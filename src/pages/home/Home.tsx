@@ -8,7 +8,7 @@ function Home() {
             <CarouselZoom/>
             <HomeConcerns/>
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;

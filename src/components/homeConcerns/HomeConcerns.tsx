@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 
 export default function HomeConcerns() {
 
-    const enter = useRef (true)
+    const enter = useRef (true);
     const addClasses = useRef (false);
     const intervalIdRef = useRef <NodeJS.Timer | undefined> (undefined);
     
@@ -45,7 +45,7 @@ export default function HomeConcerns() {
             const cardsAnimation = homeConcernsCards_cont?.getAnimations();
             const animation: Animation = cardsAnimation![0];
 
-            const homeConcernsCards_contArr = Array.from(homeConcernsCards_cont!.childNodes) as HTMLDivElement[]
+            const homeConcernsCards_contArr = Array.from(homeConcernsCards_cont!.childNodes) as HTMLDivElement[];
             
             if (direction === "left") homeConcernsCards_contArr[0].classList.add("opacityOff");
             if (direction === "left") homeConcernsCards_contArr[homeConcernsCards_contArr.length - 1].classList.add("opacityOn");
@@ -66,23 +66,23 @@ export default function HomeConcerns() {
                 const cardsList = homeConcernsCards_cont?.childNodes as NodeListOf<HTMLDivElement>;
 
                 if (direction === "left") cardsList[0].classList.remove("opacityOff");
-                if (direction === "left") cardsList[cardsList.length - 1].classList.remove("opacityOn")
+                if (direction === "left") cardsList[cardsList.length - 1].classList.remove("opacityOn");
 
                 if (direction === "right") cardsList[cardsList.length - 1].classList.remove("opacityOn");
-                if (direction === "right") cardsList[0].classList.remove("opacityOff")
+                if (direction === "right") cardsList[0].classList.remove("opacityOff");
 
                 enter.current = true;
-            }
+            };
 
             animation.addEventListener("finish", removeElement);
                                
         }
-    }
+    };
 
     useEffect(() => {
         intervalIdRef.current = setInterval(() => {
-            handleMove("right", false)
-        },5000)
+            handleMove("right", false);
+        },5000);
         
         /****************************** Eventos Touch ****************************/
 
@@ -92,7 +92,7 @@ export default function HomeConcerns() {
 
         const start = (e: TouchEvent) => {
             startX = e.touches[0].clientX;
-        }
+        };
 
         const end = (e: TouchEvent) => {
             endX = e.changedTouches[0].clientX;
@@ -102,7 +102,7 @@ export default function HomeConcerns() {
             } else if (Ax < -10) {
                 handleMove("left", true);
             }
-        }
+        };
 
         elemento?.addEventListener("touchstart", start);
         elemento?.addEventListener("touchend", end);
@@ -111,7 +111,7 @@ export default function HomeConcerns() {
 
         return () => clearInterval(intervalIdRef.current);  
 
-    }, [])
+    }, []);
                  
     return (
         <div className="homeConcernsCont flex column">
@@ -126,5 +126,5 @@ export default function HomeConcerns() {
                 <div className="homeConcernsCont_control" onClick={() => handleMove("left", true)}>{">"}</div>
             </div>
         </div>
-    )
+    );
 }

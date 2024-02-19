@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import "./navBar.css";
 import { SpinnerContext } from "../../context/spinnerContext";
 import { SpinnerContextType } from "../../types/types";
@@ -19,11 +19,11 @@ const NavBar = () => {
             const OoSElementsWf: NodeListOf<HTMLElement> = document.querySelectorAll(".OoSwF");
             OoSElements.forEach((element) => {          //Mostramos el elemento cuando aparece su primer mitad
                 if(((element.getBoundingClientRect().top ) <= (window.innerHeight  - (element.offsetHeight / 2)))) element.classList.add("OoSS");   
-            })
+            });
             OoSElementsWf.forEach((element) => {          //Mostramos el elemento cuando aparece su primer mitad
                 if(((element.getBoundingClientRect().top ) <= (window.innerHeight  - (element.offsetHeight / 2)))) element.classList.add("OoSwFF");   
-            })
-        }
+            });
+        };
         window.addEventListener("resize", OoS);
         window.addEventListener("orientationchange", OoS);
         window.addEventListener("scroll", OoS);
@@ -37,12 +37,12 @@ const NavBar = () => {
                 const OoSElementsWf = document.querySelectorAll(".OoSwF");
                 OoSElements.forEach((element) => {
                     if(((element.getBoundingClientRect().top) < (window.innerHeight))) element.classList.add("OoSS");
-                })
+                });
                 OoSElementsWf.forEach((element) => {
                     if(((element.getBoundingClientRect().top) < (window.innerHeight))) element.classList.add("OoSwFF");
-                })
+                });
             }, 1000);
-        }
+        };
         window.addEventListener("resize", handleTempo);
         window.addEventListener("orientationchange", handleTempo);
         window.addEventListener("scroll", handleTempo);
@@ -58,7 +58,7 @@ const NavBar = () => {
                 const animations = componentToWaitImages.getAnimations({ subtree: true });
                 animations.forEach((animation) => {                                 //Pausamos las animaciones
                     animation.pause();
-                })
+                });
 
                 showSpinner(true);
                 await waitAllImagesCharged();
@@ -67,9 +67,9 @@ const NavBar = () => {
                 componentToWaitImages.classList.add("opacityOnCharge");
                 animations.forEach((animation) => {                                 //Reanudamos las animaciones
                     animation.play();
-                })
+                });
             }
-        }
+        };
         checkImages();
 
 
@@ -77,7 +77,7 @@ const NavBar = () => {
 
         const navBarNamesRef = [
             ["/home", "home"], ["/team", "equipo"], ["/contact", "contacto"], ["/about", "nosotros"], ["/portfolio", "portfolio"]  //Posicion 0: texto que tiene que tener la ruta, posicion 1: texto que tiene que tener la opcion del navbar
-        ]    
+        ];    
 
         const actualOptionsArray = navBarNamesRef.find((el) => thisLocation.pathname.includes(el[0]));
         const navBarOptions = document.querySelectorAll(".opcion");
@@ -93,7 +93,7 @@ const NavBar = () => {
         }
 
         /*** Al cambiar de pagina el scroll se va arriba ***/
-        window.scrollTo({top: 0}) 
+        window.scrollTo({top: 0}); 
         /***************************************************/
         // eslint-disable-next-line
     }, [thisLocation])
@@ -106,7 +106,7 @@ const NavBar = () => {
         const iconoMenu = document.querySelector(".iconoMenu");
         iconoMenu?.setAttribute("name", "iconoMenu");
         const menu = document.querySelector(".menu");
-        menu?.setAttribute("name", "menu")
+        menu?.setAttribute("name", "menu");
         const opciones = document.getElementsByClassName("opcion");
         let initialWidth = window.innerWidth;
         let REM: number;
@@ -123,7 +123,7 @@ const NavBar = () => {
                     const animations = menu?.getAnimations() as Animation[];
                     animations[0].addEventListener("finish", () => {
                         flagEnterMenuToggle = true;
-                    })
+                    });
                 } else {
                     menu?.classList.remove("menuBaja", "menuSube");
                     menu?.classList.add("menuSube");
@@ -131,20 +131,20 @@ const NavBar = () => {
                     const animations = menu?.getAnimations() as Animation[];
                     animations[0].addEventListener("finish", () => {
                         flagEnterMenuToggle = true;
-                    })
+                    });
                 }
             }
-        })
+        });
 
         const calcularREM = () => {
-            if (window.innerWidth >= window.innerHeight) REM = 0.01 * window.innerHeight + 10;
-            if (window.innerWidth < window.innerHeight) REM = 0.01 * window.innerWidth + 10;
+            if (window.innerWidth >= window.innerHeight) REM = 0.01 * window.innerHeight + 14;
+            if (window.innerWidth < window.innerHeight) REM = 0.01 * window.innerWidth + 14;
             breakPoint = 45 * REM;
-        }
+        };
          
         calcularREM();
         if(window.innerWidth < breakPoint) {                                        //Cargamos página con un ancho menor a BreakPoint
-            const userAuthenticationComponent = document.querySelector(".userAuthenticationCont")
+            const userAuthenticationComponent = document.querySelector(".userAuthenticationCont");
             menu?.classList.add("iconoMenuON", "menuOFF");
             iconoMenu?.classList.add("iconoMenuON");
             for (const opcion of opciones) {
@@ -154,7 +154,7 @@ const NavBar = () => {
         }
         
         const check = () => {
-            const userAuthenticationComponent = document.querySelector(".userAuthenticationCont")
+            const userAuthenticationComponent = document.querySelector(".userAuthenticationCont");
             calcularREM();           
             if(initialWidth <= breakPoint && window.innerWidth > breakPoint) {                   //Pasamos de un ancho de pantalla menor a breakPoint a uno mayor
                 menu?.classList.remove("menuSube", "menuBaja", "menuOFF");
@@ -164,7 +164,7 @@ const NavBar = () => {
                 }
                 menuBajo = false;
                 initialWidth = window.innerWidth;
-                userAuthenticationComponent?.classList.remove("userAuthenticationContCenter")
+                userAuthenticationComponent?.classList.remove("userAuthenticationContCenter");
             }     
             if(initialWidth > breakPoint && window.innerWidth < breakPoint) {                   //Pasamos de un ancho de pantalla mayor a breakPoint a uno menor
                 menu?.classList.add("menuOFF");
@@ -173,20 +173,20 @@ const NavBar = () => {
                     opcion.classList.add("opcion2");
                 }
                 initialWidth = window.innerWidth;
-                userAuthenticationComponent?.classList.add("userAuthenticationContCenter")
+                userAuthenticationComponent?.classList.add("userAuthenticationContCenter");
             }     
-        }        
+        };        
 
         window.addEventListener("resize", () => check());                                        //Manejo de clases al hacer resize o cambio de orientacion
         check();
 
         window.addEventListener("click", (e) => {                                               //Cerramos en menu desplegado al hacer click en cualquier lado menos en el icono de menu
-            const sameElement = e.target as HTMLElement
+            const sameElement = e.target as HTMLElement;
             if (sameElement.getAttribute("name") !== "iconoMenu" && menuBajo === true) {
                 menu?.classList.remove("menuBaja", "menuSube");
                 menuBajo = false;
             }
-        })
+        });
                 
         // eslint-disable-next-line
     }, []);    
@@ -202,7 +202,7 @@ const NavBar = () => {
                 <Link className="opcion flex" to="/home">Preguntas frecuentes</Link>
             </div>
         </div>
-    )  
-}   
+    );  
+};   
 
 export default NavBar;

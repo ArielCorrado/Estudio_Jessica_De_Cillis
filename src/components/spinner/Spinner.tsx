@@ -11,7 +11,7 @@ const Spinner = () => {
             <PuffLoader color="#ffffff" size={100}/>
         </div>
     );
-}
+};
 
 const ImageSpinner = () => {
     return (
@@ -19,6 +19,6 @@ const ImageSpinner = () => {
             <FadeLoader color="#ffffff"/>
         </div>
     );
-}
+};
 
 export {Spinner, ImageSpinner};
