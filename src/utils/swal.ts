@@ -6,17 +6,17 @@ const swalPopUp = (title: string, text: string, icon: SweetAlertIcon) => {
         icon: icon,                                     // color: #ff5e15; } Sino los iconos de warning e info no se ven
         title: title,
         text: text,
-        confirmButtonColor: '#3E5C76',
-        iconColor: '#3E5C76',
-        color: '#384153',
+        confirmButtonColor: "#3E5C76",
+        iconColor: "#3E5C76",
+        color: "#384153",
         scrollbarPadding: false,
         customClass: {
-            confirmButton: 'sweetConfirmBoton',
+            confirmButton: "sweetConfirmBoton",
         },
-    }
+    };
 
-    Swal.fire(options)
+    Swal.fire(options);
 
-}
+};
 
 export {swalPopUp};

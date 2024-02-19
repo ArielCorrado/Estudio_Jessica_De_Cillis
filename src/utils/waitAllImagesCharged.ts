@@ -14,13 +14,13 @@ const waitAllImagesCharged = () : Promise <boolean> => {
             image.addEventListener("load", () => {                                  //Evento "load": La imagen pasó de cargando a cargada
                 imagesCount ++;
                 if (imagesCount >= allImagesCount) resolve(true);
-            })
+            });
             image.addEventListener("error", () => {                                 //Evento "error": La imagen paso de cargando a error (no se pudo cargar)
                 imagesCount ++;
                 if (imagesCount >= allImagesCount) resolve(true);
-            })
-        })                                                      
-    })                                                                                  
-}                                                                                       
+            });
+        });                                                   
+    });                                                                                 
+};                                                                                       
 
 export default waitAllImagesCharged;
