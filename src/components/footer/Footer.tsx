@@ -53,15 +53,15 @@ export default function Footer () {
                 <div className="footerLinksCont footerSection flex column">
                     <div className="flex">
                         <img src="/images/icons/links.png" alt="Links" className="footerIconTitles"/>
-                        <p className="footerTitles">Links de interés</p>
+                        <p className="footerTitles">Enlaces relevantes</p>
                     </div>
                     <p className="footer_small_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt, quaerat aspernatur minus incidunt voluptas ratione! Ea cumque minus quam, temporibus voluptatum molestiae reiciendis mollitia sint eligendi delectus placeat nostrum.</p>
                     <ul className="footerLinksListCont">
-                        <li>Link de interés 1</li>
-                        <li>Link de interés 2</li>
-                        <li>Link de interés 3</li>
-                        <li>Link de interés 4</li>
-                        <li>Link de interés 5</li>
+                        <li><a href="https://www.youtube.com/watch?v=OuixdRCdCaI" target="_blank" rel="noreferrer">Enlace 1 <span className="footerLinksDesc">youtube.com</span></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=_X7fD5L36gs" target="_blank" rel="noreferrer">Enlace 2 <span className="footerLinksDesc">youtube.com</span></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=lDsVByHQqZw" target="_blank" rel="noreferrer">Enlace 3 <span className="footerLinksDesc">youtube.com</span></a></li>
+                        <li><a href="https://www.infobae.com/sociedad/policiales/2023/09/20/quien-es-quien-en-la-banda-de-ladrones-chilenos-que-robo-16-camionetas-frontier-en-la-ciudad-en-un-mes/" target="_blank" rel="noreferrer">Enlace 4 <span className="footerLinksDesc">infobae.com</span></a></li>
+                        <li><a href="https://noticias.perfil.com/noticias/empresas-y-protagonistas/jessica-de-cillis-la-abogada-penalista-que-defiende-a-los-mas-vulnerables.phtml" target="_blank" rel="noreferrer">Enlace 5 <span className="footerLinksDesc">perfil.com</span></a></li>
                     </ul>
                 </div>
                 <div className="footerContactCont footerSection flex column">

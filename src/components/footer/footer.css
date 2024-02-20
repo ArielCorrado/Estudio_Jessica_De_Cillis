@@ -106,9 +106,25 @@
 .footerLinksListCont > * {
     text-align: left;
     font-size: 0.65rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.footerLinksListCont > *:hover {
+    color: var(--color-navbar-hover);
+}
+
+.footerLinksListCont > *:hover .footerLinksDesc {
+    color: var(--color-navbar-hover);
+    opacity: 1;
+}
+
+.footerLinksDesc {
+    font-weight: 200;
+    text-transform: none;
+    font-size: 0.60rem;
+    opacity: 0.75;
 }
 
 /***************************************************************/
