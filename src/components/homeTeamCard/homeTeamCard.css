@@ -1,0 +1,18 @@
+.homeTeamCard_cont {
+    margin: 1rem 0.5rem;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+    transition-property: transform;
+}
+
+.scale105:hover {
+    transform: scale(105%);
+}
+
+.scale89:hover {
+    transform: scale(89.25%);
+}
+
+.homeTeamCard_ScaleDown {
+    transform: scale(85%);
+}

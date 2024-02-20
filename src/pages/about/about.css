@@ -1,0 +1,27 @@
+.aboutCont {
+    margin-top: var(--navBar-height);
+    min-height: calc(100vh - var(--navBar-height));
+    padding-bottom: 5rem;
+    cursor: pointer;
+}
+
+.homeTeamCardDesireeImgClass, .homeTeamCardMartinImgClass, .homeTeamCardCamilaImgClass, .homeTeamCardJessicaImgClass {
+    width: 85%;
+    height: 85%;
+    object-position: top;
+    object-fit: cover;
+    transform: translateY(1rem);
+}
+
+.homeTeamCardDesireeImgClass {
+    filter: brightness(105%) contrast(125%) grayscale(100%);
+}
+
+.homeTeamCardCamilaImgClass {
+    filter: brightness(130%) grayscale(100%);
+}
+
+.aboutLine {
+    margin-top: 0;
+}
+

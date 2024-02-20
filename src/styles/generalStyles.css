@@ -1,3 +1,9 @@
+.paddingSeccions {
+    padding: 4rem 1rem;
+}
+
+/**********************************************************************/
+
 .seccionToWaitImages {
     opacity: 0;
 }
