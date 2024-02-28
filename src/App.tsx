@@ -4,6 +4,7 @@ import NavBar from "./components/navbarAndInfo/NavBarAndInfo";
 import "./styles/generalStyles.css";
 import Footer from "./components/footer/Footer";
 import About from "./pages/about/About";
+import CvPage from "./pages/cvPage/CvPage";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Routes>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
+                <Route path="/cv/:name" element={<CvPage/>}/>
                 <Route path="*" element={<Navigate to="/home"/>}/>
             </Routes>
             <Footer/>

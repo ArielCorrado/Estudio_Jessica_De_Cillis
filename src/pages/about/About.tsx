@@ -1,5 +1,6 @@
 import "./about.css";
 import HomeTeamCard from "../../components/homeTeamCard/HomeTeamCard";
+import { Link } from "react-router-dom";
 
 export default function About() {
     return (
@@ -8,13 +9,15 @@ export default function About() {
             <h2 className="homeConcernsCont_title"> <span className="homeConcernsCont_title_color">Lorem ipsum dolor sit,</span> amet consectetur.</h2>
             <h3 className="homeConcernsCont_subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
         
-            <HomeTeamCard 
-                imgPath="/images/team/jessica.jpg" 
-                mainText="JESSICA DE CILLIS" 
-                secondaryText="Abogada Penalista" 
-                imgClass="homeTeamCardJessicaImgClass"
-                contClass="scale105"
-            />  
+            <Link to="/cv/jessica">
+                <HomeTeamCard 
+                    imgPath="/images/team/jessica.jpg" 
+                    mainText="JESSICA DE CILLIS" 
+                    secondaryText="Abogada Penalista" 
+                    imgClass="homeTeamCardJessicaImgClass"
+                    contClass="scale105"
+                />  
+            </Link>
             <div className="flex wrap">
                 <HomeTeamCard 
                     imgPath="/images/team/desiree.png" 
