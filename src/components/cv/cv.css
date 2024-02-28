@@ -78,6 +78,7 @@
    padding: 1rem;
    padding-top: 0;
    padding-left: 2rem;
+   text-align: left;
 }
 
 .cvSheetText, .cvSheetTextMains, .cvSheetTextTitle {
@@ -86,21 +87,24 @@
     font-weight: 300;
 }
 
-.cvSheetTextTitle {
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-color: rgb(185, 185, 185);
-}
-
 .cvSheetTextMains {
     font-weight: 500;    
     margin-bottom: 0.25rem;
 }
 
 .cvSheetTextMainsTop {
+    font-weight: 600;
     margin-top: 0.75rem;
     margin-bottom: 0;
+}
+
+.cvSheetTextTitle {
+    font-weight: 700;
+    display: inline-block;
+    min-width: max-content;
+    max-width: 100%;
+    margin-bottom: 0;
+    color: var(--color-web-2);
 }
 
 .cvSheetTextCont p:first-child {
@@ -109,7 +113,7 @@
 
 .cvSheetTextLine {
     width: calc(100%);
-    height: 4px;
+    height: 3px;
     background-color: var(--color-web-2);
     margin: 1rem 0;
 }
@@ -132,5 +136,13 @@
 
     .cvSheetTextCont {
         padding-left: 1rem;
+    }
+
+    .cvSheetTextTitle {
+        margin-top: 1.5rem;
+    }
+
+    .cvSheetTextCont p:first-child {
+        margin-top: 1.5rem;
     }
 }
