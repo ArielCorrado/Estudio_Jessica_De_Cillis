@@ -4,7 +4,7 @@ import HomeConcerns from "../../components/homeConcerns/HomeConcerns";
 
 function Home() {
     return (
-        <div className="home">
+        <div className="home seccionToWaitImages">
             <CarouselZoom/>
             <HomeConcerns/>
         </div>
