@@ -10,7 +10,7 @@ export default function Cv (props: {name: string, lastname: string, position: st
                     <p className="cvSheetTitle flex"> {props.position} </p>
                     <p className="cvSheetSubTitle"> {props.speciality} </p>
                 </div>
-                <div className="cvSheetText">
+                <div className="cvSheetTextCont">
                     {props.text}
                 </div>
             </div>

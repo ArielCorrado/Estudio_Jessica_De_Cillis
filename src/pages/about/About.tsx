@@ -19,13 +19,15 @@ export default function About() {
                 />  
             </Link>
             <div className="flex wrap">
-                <HomeTeamCard 
-                    imgPath="/images/team/desiree.png" 
-                    mainText="DESIRÉE YVONNE BEGHIN" 
-                    secondaryText="Abogada / Profesora" 
-                    imgClass="homeTeamCardDesireeImgClass" 
-                    contClass="homeTeamCard_ScaleDown scale89"
-                />      
+                <Link to="/cv/desiree">
+                    <HomeTeamCard 
+                        imgPath="/images/team/desiree.png" 
+                        mainText="DESIRÉE YVONNE BEGHIN" 
+                        secondaryText="Abogada / Profesora" 
+                        imgClass="homeTeamCardDesireeImgClass" 
+                        contClass="homeTeamCard_ScaleDown scale89"
+                    /> 
+                </Link>     
                 <HomeTeamCard 
                     imgPath="/images/team/martin.png" 
                     mainText="MARTÍN" 
