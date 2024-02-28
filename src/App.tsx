@@ -5,10 +5,16 @@ import "./styles/generalStyles.css";
 import Footer from "./components/footer/Footer";
 import About from "./pages/about/About";
 import CvPage from "./pages/cvPage/CvPage";
+import { useContext } from "react";
+import { SpinnerContext } from "./context/spinnerContext";
 
 function App() {
+
+    const {spinner} = useContext (SpinnerContext);
+
     return (
         <BrowserRouter>
+            {spinner}
             <NavBar/>
             <Routes>
                 <Route path="/home" element={<Home/>}/>

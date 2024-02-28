@@ -1,10 +1,10 @@
 import "./cv.css";
 
-export default function Cv (props: {name: string, lastname: string, position: string, speciality: string, text: JSX.Element}) {
+export default function Cv (props: {name: string, lastname: string, position: string, speciality: string, text: JSX.Element, imgsrc: string}) {
     return (
         <div className="cvCont seccionToWaitImages flex">
             <div className="cvSheetCont">
-                <img src="/images/team/jessica.jpg" alt="Jessica de Cillis" className="cvSheetImg"/>
+                <img src={props.imgsrc} alt="Jessica de Cillis" className="cvSheetImg"/>
                 <div className="cvSheetMainTexts flex column">
                     <h2 className="cvSheetName"> {props.name} <br /> {props.lastname} </h2>
                     <p className="cvSheetTitle flex"> {props.position} </p>

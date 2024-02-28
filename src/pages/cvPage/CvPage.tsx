@@ -23,11 +23,12 @@ export default function CvPage () {
                 <p>Brindó charlas a diferentes y variados grupos académicos sobre el Juicio por Jurados en la Argentina, sobre la Suspensión del Juicio a Prueba, sobre Medios de Coerción, Ley de Flagrancia, sobre el Debate Oral en Nación, entre las más relevantes. </p>
                 <p>Trabaja como abogada independiente desde que egresó de la Facultad de Derecho, matriculada en CABA, provincia de Buenos Aires y en el Fuero Federal, actuando en causas de impacto público como IRON MOUNTAIN, Marco Stell y Tondini, entre otras. </p>
                 <p>Posee amplia experiencia en debates orales y públicos. </p>
-            </>
+            </>,
+            imgsrc: "/images/team/jessica.jpg",
         }
     };
     
     return (
-        <Cv name={team[name!].name} lastname={team[name!].lastname} position={team[name!].position} speciality={team[name!].speciality} text={team[name!].text}/>
+        <Cv name={team[name!].name} lastname={team[name!].lastname} position={team[name!].position} speciality={team[name!].speciality} text={team[name!].text} imgsrc={team[name!].imgsrc}/>
     );
 }
