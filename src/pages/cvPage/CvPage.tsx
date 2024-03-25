@@ -27,6 +27,22 @@ export default function CvPage () {
             imgsrc: "/images/team/jessica.jpg",
         },
 
+        martin: {
+            name: "Martín",
+            lastname: "",
+            position: "Abogado / Docente",
+            speciality: "Especialista en derecho penal",
+            text: 
+            <>
+                <p className="cvSheetText">Es abogado egresado de la Universidad de Buenos Aires en el año 2014. </p>
+                <p className="cvSheetText">Desde el año 2016 se encuentra matriculado en el Colegio Público de la Abogacía de la Capital Federal, trabajando profesionalmente desde entonces. </p>
+                <p className="cvSheetText">Asimismo, ha desempeñado actividad como docente de la asignatura “Derecho Romano” en la Universidad de Buenos Aíres durante los años 2016 y 2019. </p>
+                <p className="cvSheetText">Actualmente, se desempeña como ayudante de “práctica profesional” penal en la Universidad de Buenos Aires. </p>
+                Actualmente, se desempeña como ayudante de “práctica profesional” penal en la Universidad de Buenos Aires.
+            </>,
+            imgsrc: "/images/team/martin.png",
+        },
+
         desiree: {
             name: "DESIRÉE",
             lastname: "YVONNE BEGHIN",
@@ -38,7 +54,7 @@ export default function CvPage () {
 
                 <p className="cvSheetTextMains cvSheetTextMainsTop">2020- Presente</p>
                 <p className="cvSheetTextMains">Abogada- Ejercicio independiente de la profesión</p>
-                <p className="cvSheetText">Especialización en Derecho Penal,Laboral y Previsional.</p>
+                <p className="cvSheetText">Especialización en Derecho Penal, Laboral y Previsional.</p>
 
                 <p className="cvSheetTextMains cvSheetTextMainsTop">2019</p>
                 <p className="cvSheetTextMains">Patrocinio Jurídico Gratuito U.B.A</p>
@@ -97,7 +113,29 @@ export default function CvPage () {
                 <p className="cvSheetText">
                     Instituto privado Santa Catalina de Alejandría.
                 </p>
-            
+
+                <div className="cvSheetTextLine"></div>
+
+                <p className="cvSheetTextTitle">Ha realizado varios cursos y talleres, entre ellos:</p>   
+
+                <p className="cvSheetTextMains cvSheetTextMainsTop"></p>
+                <p className="cvSheetTextMains">Dictados por la Universidad de Buenos Aires (UBA):</p>
+                <p className="cvSheetText">“Derecho Procesal Penal” del Programa de Perfeccionamiento en el Ejercicio Profesional.</p>
+                <p className="cvSheetText">“Aspectos prácticos de la suspensión de juicio a prueba en los códigos procesales de Nación, Provincia de Buenos Aires y CABA”.</p>
+                <p className="cvSheetText">“La instrucción penal en la Provincia de Buenos Aires”.</p>
+                <p className="cvSheetText">“Etapa intermedia del proceso penal en la Provincia de Buenos Aires”.</p>
+                <p className="cvSheetText">“Teoría del caso y litigación en juicio oral”.</p>
+                <p className="cvSheetText">“Delitos Informáticos: análisis en particular”.</p>
+                <p className="cvSheetText">“Estrategias de litigación penal”.</p>
+                <p className="cvSheetText">“Medidas de coerción y medidas alternativas en el proceso penal”.</p>
+                <p className="cvSheetText">“Cuestiones actuales en legítima defensa”.</p>
+
+                <p className="cvSheetTextMains cvSheetTextMainsTop"></p>
+                <p className="cvSheetTextMains">Dictados por la Unión de Empleados de Justicia de la Nación (UEJN):</p>
+                <p className="cvSheetText">“Derecho Procesal Penal” del Programa de Perfeccionamiento en el Ejercicio Profesional.</p>
+                <p className="cvSheetText">“Aspectos prácticos de la suspensión de juicio a prueba en los códigos procesales de Nación, Provincia de Buenos Aires y CABA”.</p>
+                <p className="cvSheetText">“La instrucción penal en la Provincia de Buenos Aires”.</p>
+                         
             </>,
             imgsrc: "/images/team/desiree.png",
         }

@@ -85,11 +85,13 @@
     text-align: left;
     margin-bottom: 0.5rem;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 .cvSheetTextMains {
     font-weight: 500;    
-    margin-bottom: 0.25rem;
+    margin-bottom: 1em;
+    margin-top: 0.5rem;
 }
 
 .cvSheetTextMainsTop {

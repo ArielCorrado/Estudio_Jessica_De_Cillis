@@ -27,14 +27,16 @@ export default function About() {
                         imgClass="homeTeamCardDesireeImgClass" 
                         contClass="homeTeamCard_ScaleDown scale89"
                     /> 
-                </Link>     
-                <HomeTeamCard 
-                    imgPath="/images/team/martin.png" 
-                    mainText="MARTÍN" 
-                    secondaryText="Abogado" 
-                    imgClass="homeTeamCardMartinImgClass" 
-                    contClass="homeTeamCard_ScaleDown scale89" 
-                />    
+                </Link>   
+                <Link to="/cv/martin">
+                    <HomeTeamCard 
+                        imgPath="/images/team/martin.png" 
+                        mainText="MARTÍN" 
+                        secondaryText="Abogado" 
+                        imgClass="homeTeamCardMartinImgClass" 
+                        contClass="homeTeamCard_ScaleDown scale89" 
+                    />    
+                </Link>
                 <HomeTeamCard 
                     imgPath="/images/team/camila.png" 
                     mainText="Camila Saftih Brea" 
