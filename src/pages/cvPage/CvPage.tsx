@@ -24,7 +24,7 @@ export default function CvPage () {
                 <p className="cvSheetText">Trabaja como abogada independiente desde que egresó de la Facultad de Derecho, matriculada en CABA, provincia de Buenos Aires y en el Fuero Federal, actuando en causas de impacto público como IRON MOUNTAIN, Marco Stell y Tondini, entre otras. </p>
                 <p className="cvSheetText">Posee amplia experiencia en debates orales y públicos. </p>
             </>,
-            imgsrc: "/images/team/jessica.jpg",
+            imgsrc: "/images/team/jessica.jpeg",
         },
 
         martin: {

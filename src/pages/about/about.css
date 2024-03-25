@@ -13,6 +13,10 @@
     transform: translateY(1rem);
 }
 
+.homeTeamCardJessicaImgClass {
+    object-position: bottom;
+}
+
 .homeTeamCardDesireeImgClass {
     filter: brightness(105%) contrast(125%) grayscale(100%);
 }

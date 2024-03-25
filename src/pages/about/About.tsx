@@ -11,7 +11,7 @@ export default function About() {
         
             <Link to="/cv/jessica">
                 <HomeTeamCard 
-                    imgPath="/images/team/jessica.jpg" 
+                    imgPath="/images/team/jessica.jpeg" 
                     mainText="JESSICA DE CILLIS" 
                     secondaryText="Abogada Penalista" 
                     imgClass="homeTeamCardJessicaImgClass"
