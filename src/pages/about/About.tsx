@@ -37,13 +37,15 @@ export default function About() {
                         contClass="homeTeamCard_ScaleDown scale89" 
                     />    
                 </Link>
-                <HomeTeamCard 
-                    imgPath="/images/team/camila.png" 
-                    mainText="Camila Saftih Brea" 
-                    secondaryText="Abogada" 
-                    imgClass="homeTeamCardCamilaImgClass" 
-                    contClass="homeTeamCard_ScaleDown scale89"
-                />  
+                <Link to="/cv/camila">
+                    <HomeTeamCard 
+                        imgPath="/images/team/camila.png" 
+                        mainText="Camila Saftih Brea" 
+                        secondaryText="Abogada" 
+                        imgClass="homeTeamCardCamilaImgClass" 
+                        contClass="homeTeamCard_ScaleDown scale89"
+                    />  
+                </Link>
             </div>
         </div>
     );

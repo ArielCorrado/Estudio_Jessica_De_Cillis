@@ -54,7 +54,7 @@ export default function CvPage () {
 
                 <p className="cvSheetTextMains cvSheetTextMainsTop">2020- Presente</p>
                 <p className="cvSheetTextMains">Abogada- Ejercicio independiente de la profesión</p>
-                <p className="cvSheetText">Especialización en Derecho Penal, Laboral y Previsional.</p>
+                <p className="cvSheetText">Especialización en Derecho Penal, Laboral y Previsional.</p><br />
 
                 <p className="cvSheetTextMains cvSheetTextMainsTop">2019</p>
                 <p className="cvSheetTextMains">Patrocinio Jurídico Gratuito U.B.A</p>
@@ -138,10 +138,48 @@ export default function CvPage () {
                          
             </>,
             imgsrc: "/images/team/desiree.png",
+        },
+        camila: {
+            name: "CAMILA",
+            lastname: "Saftih Brea",
+            position: "Abogada",
+            speciality: "Especialización en Derecho Penal.",
+            imgClass: "opc",
+            text: 
+            <>  
+                <p className="cvSheetTextTitle cvSheetTextTitleLong">
+                    Es Abogada egresada de la Facultad de Derecho y Ciencias Sociales de la Universidad de Buenos Aires, con especialización en Derecho Penal. <br />
+                    Ha realizado varios cursos y talleres, entre ellos:
+                </p>          
+       
+                <p className="cvSheetTextMains cvSheetTextMainsTop"></p>
+                <p className="cvSheetTextMains">Dictados por la Universidad de Buenos Aires (UBA):</p>
+                <p className="cvSheetText">“Derecho Procesal Penal” del Programa de Perfeccionamiento en el Ejercicio Profesional.</p>
+                <p className="cvSheetText">“Aspectos prácticos de la suspensión de juicio a prueba en los códigos procesales de Nación, Provincia de Buenos Aires y CABA”.</p>
+                <p className="cvSheetText">“La instrucción penal en la Provincia de Buenos Aires”.</p>
+                <p className="cvSheetText">“Etapa intermedia del proceso penal en la Provincia de Buenos Aires”.</p>
+                <p className="cvSheetText">“Teoría del caso y litigación en juicio oral”.</p>
+                <p className="cvSheetText">“Delitos Informáticos: análisis en particular”.</p>
+                <p className="cvSheetText">“Estrategias de litigación penal”.</p>
+                <p className="cvSheetText">“Medidas de coerción y medidas alternativas en el proceso penal”.</p>
+                <p className="cvSheetText">“Cuestiones actuales en legítima defensa”.</p>
+
+                <p className="cvSheetTextMains cvSheetTextMainsTop"></p>
+                <p className="cvSheetTextMains">Dictados por la Unión de Empleados de Justicia de la Nación (UEJN):</p>
+                <p className="cvSheetText">“Ley del Arrepentido”.</p>
+                <p className="cvSheetText">“Cibercrimen”.</p>    
+
+                <div className="cvSheetTextLine"></div>
+
+                <p className="cvSheetText cvSheetTextBold">Ha trabajado en la Dirección de Asistencia Judicial en Delitos Complejos y Crimen Organizado del Poder Judicial de la Nación y actualmente ejerce como abogada independiente.</p>
+                <p className="cvSheetText cvSheetTextBold">Se encuentra matriculada en CABA, Provincia de Buenos Aires y en el Fuero Federal, lo cual le permite asumir como abogada en causas federales de todo el país.</p>
+                <p className="cvSheetText cvSheetTextBold">Posee amplia experiencia en debates orales y públicos.</p>
+            </>,
+            imgsrc: "/images/team/camila.png",
         }
     };
     
     return (
-        <Cv name={team[name!].name} lastname={team[name!].lastname} position={team[name!].position} speciality={team[name!].speciality} text={team[name!].text} imgsrc={team[name!].imgsrc}/>
+        <Cv name={team[name!].name} lastname={team[name!].lastname} position={team[name!].position} speciality={team[name!].speciality} text={team[name!].text} imgsrc={team[name!].imgsrc} imgClass={team[name!].imgClass}/>
     );
 }
