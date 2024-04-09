@@ -50,11 +50,11 @@ export default function CvPage () {
             speciality: "Especialización en Derecho Penal, Laboral y Previsional.",
             text: 
             <>  
-                <p className="cvSheetTextTitle">EXPERIENCIA LABORAL</p>          
+                <p className="cvSheetTextTitle cvSheetTextTitleFirstPortrait">EXPERIENCIA LABORAL</p>          
 
                 <p className="cvSheetTextMains cvSheetTextMainsTop">2020- Presente</p>
                 <p className="cvSheetTextMains">Abogada- Ejercicio independiente de la profesión</p>
-                <p className="cvSheetText">Especialización en Derecho Penal, Laboral y Previsional.</p><br />
+                <p className="cvSheetText">Especialización en Derecho Penal, Laboral y Previsional.</p>
 
                 <p className="cvSheetTextMains cvSheetTextMainsTop">2019</p>
                 <p className="cvSheetTextMains">Patrocinio Jurídico Gratuito U.B.A</p>

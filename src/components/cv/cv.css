@@ -17,6 +17,7 @@
     height: 100%;
     background-image: url(../../../public/images/cv/bg.jpg);
     background-size: cover;
+    filter: var(--bg-filter);
     z-index: -1;
 }
 
@@ -86,13 +87,17 @@
     font-weight: 300;
 }
 
+.cvSheetText {
+    margin-bottom: 0.75rem;
+}
+
 .cvSheetTextBold {
     font-weight: 500;
 }
 
 .cvSheetTextMains {
     font-weight: 500;    
-    margin-bottom: 1em;
+    margin-bottom: 0.25rem;
     margin-top: 0.25rem;
 }
 
@@ -104,12 +109,11 @@
 
 .cvSheetTextTitle {
     font-weight: 700;
-    /* display: inline-block; */
-    /* min-width: max-content; */
     max-width: 100%;
     margin-bottom: 0;
     color: var(--color-web-2);
     line-height: 1.3;
+    font-size: 17px;
 }
 
 .cvSheetTextTitleLong {
@@ -126,6 +130,10 @@
     height: 3px;
     background-color: var(--color-web-2);
     margin: 1rem 0;
+}
+
+.cvHeadCont {
+    display: none;
 }
 
 @media only screen and (orientation: portrait) {
@@ -155,4 +163,38 @@
     .cvSheetTextCont p:first-child {
         margin-top: 1.5rem;
     }
+
+    /*******************************/
+
+    .cvSheetImgPortrait {
+        float: unset;
+        height: 11rem;
+        object-position: top;
+    }
+
+    .cvHeadCont {
+        align-items: flex-start;
+    }
+
+    .cvSheetSubTitle {
+        margin-top: 0.25rem;
+    }
+
+    .cvSheetTextTitle {
+        margin-top: 0.5rem;
+        font-size: 16px;
+    }
+
+    .cvHeadLandsCape {
+        display: none;
+    }
+
+    .cvHeadCont {
+        display: flex;
+    }
+
+    .cvSheetTextTitleFirstPortrait {
+        margin-top: 0.75rem !important;
+    }
+   
 }

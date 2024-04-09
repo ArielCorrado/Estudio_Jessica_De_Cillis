@@ -2,7 +2,6 @@
     margin-top: var(--navBar-height);
     min-height: calc(100vh - var(--navBar-height));
     padding-bottom: 5rem;
-    cursor: pointer;
 }
 
 .homeTeamCardDesireeImgClass, .homeTeamCardMartinImgClass, .homeTeamCardCamilaImgClass, .homeTeamCardJessicaImgClass {

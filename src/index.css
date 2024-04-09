@@ -20,6 +20,8 @@
     --concerns-cards-margin: 2rem;
 
     --footer-border-lines-color: #303441;
+
+    --bg-filter: brightness(60%) contrast(90%);
 }
 
 * {
