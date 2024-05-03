@@ -8,6 +8,7 @@ import CvPage from "./pages/cvPage/CvPage";
 import { useContext } from "react";
 import { SpinnerContext } from "./context/spinnerContext";
 import Contact from "./pages/contact/Contact";
+import Areas from "./pages/areas/Areas";
 
 function App() {
 
@@ -20,8 +21,9 @@ function App() {
             <Routes>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
+                <Route path="/areas" element={<Areas/>}/>
                 <Route path="/contact" element={<Contact/>}/>
-                <Route path="/cv/:name" element={<CvPage/>}/>
+                <Route path="/cv/:name" element={<CvPage/>}/>                
                 <Route path="*" element={<Navigate to="/home"/>}/>
             </Routes>
             <Footer/>

@@ -19,6 +19,15 @@ export default function About() {
                 />  
             </Link>
             <div className="flex wrap">
+                <Link to="/cv/camila">
+                    <HomeTeamCard 
+                        imgPath="/images/team/camila.png" 
+                        mainText="Camila Saftih Brea" 
+                        secondaryText="Abogada" 
+                        imgClass="homeTeamCardCamilaImgClass" 
+                        contClass="homeTeamCard_ScaleDown scale89"
+                    />  
+                </Link>
                 <Link to="/cv/desiree">
                     <HomeTeamCard 
                         imgPath="/images/team/desiree.png" 
@@ -31,20 +40,11 @@ export default function About() {
                 <Link to="/cv/martin">
                     <HomeTeamCard 
                         imgPath="/images/team/martin.png" 
-                        mainText="MARTÍN" 
+                        mainText="MARTÍN CANO" 
                         secondaryText="Abogado" 
                         imgClass="homeTeamCardMartinImgClass" 
                         contClass="homeTeamCard_ScaleDown scale89" 
                     />    
-                </Link>
-                <Link to="/cv/camila">
-                    <HomeTeamCard 
-                        imgPath="/images/team/camila.png" 
-                        mainText="Camila Saftih Brea" 
-                        secondaryText="Abogada" 
-                        imgClass="homeTeamCardCamilaImgClass" 
-                        contClass="homeTeamCard_ScaleDown scale89"
-                    />  
                 </Link>
             </div>
         </div>

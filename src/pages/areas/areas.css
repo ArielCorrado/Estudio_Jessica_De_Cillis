@@ -1,0 +1,14 @@
+.areasCont {
+    justify-content: flex-start;
+}
+
+.areasTextCont {
+    width: 35rem;
+    max-width: 100%;
+    align-items: flex-start;
+}
+
+.areasTextCont p {
+    text-align: left;
+    line-height: 1.5;
+}

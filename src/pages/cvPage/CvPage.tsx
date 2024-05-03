@@ -28,7 +28,7 @@ export default function CvPage () {
         },
 
         martin: {
-            name: "Martín",
+            name: "Martín Cano",
             lastname: "",
             position: "Abogado / Docente",
             speciality: "Especialista en derecho penal",
@@ -38,7 +38,6 @@ export default function CvPage () {
                 <p className="cvSheetText">Desde el año 2016 se encuentra matriculado en el Colegio Público de la Abogacía de la Capital Federal, trabajando profesionalmente desde entonces. </p>
                 <p className="cvSheetText">Asimismo, ha desempeñado actividad como docente de la asignatura “Derecho Romano” en la Universidad de Buenos Aíres durante los años 2016 y 2019. </p>
                 <p className="cvSheetText">Actualmente, se desempeña como ayudante de “práctica profesional” penal en la Universidad de Buenos Aires. </p>
-                Actualmente, se desempeña como ayudante de “práctica profesional” penal en la Universidad de Buenos Aires.
             </>,
             imgsrc: "/images/team/martin.png",
         },
