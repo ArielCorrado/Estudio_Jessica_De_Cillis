@@ -9,14 +9,16 @@ const swalPopUp = (title: string, text: string, icon: SweetAlertIcon) => {
         confirmButtonColor: "#3E5C76",
         iconColor: "#3E5C76",
         color: "#384153",
-        scrollbarPadding: false,
+        scrollbarPadding: true,
         customClass: {
             confirmButton: "sweetConfirmBoton",
         },
     };
 
+    const navBar = document.querySelector(".navBar_navBarInfo_Cont") as HTMLDivElement;         //Para que el navbar ocupe el ancho del viewsreen menos el ancho del scroll
+    navBar.style.width = document.body.offsetWidth + "px";
+           
     Swal.fire(options);
-
 };
 
 export {swalPopUp};
