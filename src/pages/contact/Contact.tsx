@@ -64,9 +64,9 @@ const Contact = () => {
             <div className='seccionContact OoSwF flex column'>
                 <div className="telEmailCont flex wrap">
                     <div className='tel-contacto flex'>
-                        <a href="https://wa.me/+5491140869828" target='_blank' rel="noreferrer" className='flex'>
+                        <a href="https://wa.me/+5491159915175" target='_blank' rel="noreferrer" className='flex'>
                             <img src="/images/icons/ws2.png" alt="phone" className='imgContactoPhone iconsContactFilter' />
-                            <h2>+54 9 11 40869828</h2>
+                            <h2>+54 9 11 59915175</h2>
                         </a>
                     </div>
                     <div className='email-contacto flex'>
