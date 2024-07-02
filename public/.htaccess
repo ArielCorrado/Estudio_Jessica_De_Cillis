@@ -1,4 +1,10 @@
 Options -MultiViews
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.html [QSA,L]
+RewriteEngine On
+
+# Redirige de https://www.abogadospenalistasar.com.ar a https://abogadospenalistasar.com.ar
+RewriteCond %{HTTP_HOST} ^www\.abogadospenalistasar\.com\.ar [NC]
+RewriteRule ^(.*)$ https://abogadospenalistasar.com.ar/$1 [L,R=301]
+
+# Mantén las reglas existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
