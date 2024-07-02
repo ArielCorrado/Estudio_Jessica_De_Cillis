@@ -5,6 +5,7 @@
     $to = 'info@abogadospenalistasar.com.ar';
     
     $name = utf8_decode($data['name']);
+    $lastname = utf8_decode($data['lastname']);
     $phone = utf8_decode($data['phone']);
     $email = utf8_decode($data['email']);
     $message = utf8_decode($data['message']);
@@ -25,6 +26,8 @@
            
             <p class='titulos'> <b> Nombre: </b> </p>
             <p>" . $name . "</p> <br/>
+            <p class='titulos'> <b> Apellido: </b> </p>
+            <p>" . $lastname . "</p> <br/>
             <p class='titulos'> <b> Telefono: </b> </p>
             <p>" . $phone . "</p> <br/>
             <p class='titulos'> <b> e-mail: </b> </p>

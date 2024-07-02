@@ -5,11 +5,11 @@ import { SpinnerContext } from "../../context/spinnerContext";
 import { swalPopUp } from "../../utils/swal";
 
 type formValues = {
-    nombre: string;
-    apellido: string;
+    name: string;
+    lastname: string;
     email: string;
-    telefono: string;
-    mensaje: string;
+    phone: string;
+    message: string;
 }
 
 const Contact = () => {
@@ -22,7 +22,7 @@ const Contact = () => {
         const formData = new FormData(formRef.current as HTMLFormElement);
         const dataOBJ = Object.fromEntries(formData) as formValues;
 
-        if (dataOBJ.nombre.trim() !== "" && dataOBJ.email.trim() !== "" && dataOBJ.telefono.trim() !== "" && dataOBJ.mensaje.trim() !== "") {
+        if (dataOBJ.name.trim() !== "" && dataOBJ.email.trim() !== "" && dataOBJ.phone.trim() !== "" && dataOBJ.message.trim() !== "") {
             sendForm(dataOBJ);
         } else {
             swalPopUp("Ops!", "Falta Ingresar Algún Dato", "warning");
@@ -70,9 +70,9 @@ const Contact = () => {
                         </a>
                     </div>
                     <div className='email-contacto flex'>
-                        <a href="mailto:info@abogadosnacion.com.ar" className='flex'>
+                        <a href="mailto:info@abogadospenalistasar.com.ar" className='flex'>
                             <img src="/images/icons/email2.png" alt="email" className='imgContactoEmail iconsContactFilter' />
-                            <h2>info@abogadosnacion.com.ar</h2>
+                            <h2>info@abogadospenalistasar.com.ar</h2>
                         </a>
                     </div>
                 </div>
@@ -81,11 +81,11 @@ const Contact = () => {
                         <div className='contTituloContacto flex'>
                             <h2 className='titles tituloContacto'>ENVIANOS TU CONSULTA</h2>
                         </div>
-                        <input type="text" name="nombre" className='formNom OoS inputForm' placeholder='NOMBRE' />
-                        <input type="text" name="apellido" className='formApellido OoS inputForm' placeholder='APELLIDO (OPCIONAL)' />
-                        <input type="tel" name="telefono" className='formTel OoS inputForm' placeholder='TELÉFONO' />
+                        <input type="text" name="name" className='formNom OoS inputForm' placeholder='NOMBRE' />
+                        <input type="text" name="lastname" className='formApellido OoS inputForm' placeholder='APELLIDO (OPCIONAL)' />
+                        <input type="tel" name="phone" className='formTel OoS inputForm' placeholder='TELÉFONO' />
                         <input type="email" name="email" className='formEmail OoS inputForm' placeholder='E-MAIL' />
-                        <textarea name="mensaje" className='formMsj OoS inputForm' placeholder='MENSAJE' rows={20} cols={45} />
+                        <textarea name="message" className='formMsj OoS inputForm' placeholder='MENSAJE' rows={20} cols={45} />
                     </form>
                     <div className='contBotonContacto flex'><button type="button" className='sliderButton boton-contacto' onClick={validateForm}> Enviar </button></div>
                 </div>
