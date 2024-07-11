@@ -40,13 +40,13 @@
 }
 
 .imgHomeLogo {
-    height: 4rem;
-    filter: brightness(90%);
+    height: 3.5rem;
 }
 
 .imgHomeText1 {
     font-size: 1.5rem;
     font-weight: 500;
+    margin-top: 0.5rem;
 }
 
 .imgHomeText2 {

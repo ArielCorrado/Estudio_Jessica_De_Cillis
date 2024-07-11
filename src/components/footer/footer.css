@@ -50,14 +50,18 @@
 
 /***************************************************************/
 
+.footerLogoAndNetworksCont {
+    justify-content: flex-start;
+}
+
 .footerLogoAndNetworksCont > * {
     margin-bottom: 1rem;
 }
 
 .logoFooter {
-    height: 3.5rem;
-    width: 3.5rem;
+    width: 6rem;
     object-fit: contain;
+    margin-bottom: 2rem;
 }
 
 .footer_small_text {
@@ -69,26 +73,25 @@
 
 .footerLogoAndNetworks_networksCont {
     width: 100%;
-    justify-content: flex-start;
 }
 
-.footerLogoAndNetworks_networksCont div:first-child {
+.footerLogoAndNetworks_networksCont a:first-child {
     padding-left: 0;
 }
 
-.footerLogoAndNetworks_networksCont div:last-child {
+.footerLogoAndNetworks_networksCont a:last-child {
     border-right: 0;
 }
 
 .footerLogoAndNetworks_netWorkCont {
-    width: 25%;
+    width: 33%;
     border-right: 1px solid var(--footer-border-lines-color);
     margin-bottom: 0.25rem;
 }
 
 .footer_icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 2rem;
+    height: 2rem;
     object-fit: contain;
     margin-bottom: 0.5rem;
 }
@@ -99,6 +102,10 @@
 
 /***************************************************************/
 
+.footerLinksListCont a {
+    font-weight: 200;
+}
+
 .footerLinksCont > * {
     margin-bottom: 1rem;
 }
@@ -107,24 +114,11 @@
     text-align: left;
     font-size: 0.65rem;
     margin-bottom: 0.35rem;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
 .footerLinksListCont > *:hover {
     color: var(--color-navbar-hover);
-}
-
-.footerLinksListCont > *:hover .footerLinksDesc {
-    color: var(--color-navbar-hover);
-    opacity: 1;
-}
-
-.footerLinksDesc {
-    font-weight: 200;
-    text-transform: none;
-    font-size: 0.60rem;
-    opacity: 0.75;
 }
 
 /***************************************************************/

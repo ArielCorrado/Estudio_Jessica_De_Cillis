@@ -3,14 +3,7 @@ import { useRef, useContext } from "react";
 import "./contact.css";
 import { SpinnerContext } from "../../context/spinnerContext";
 import { swalPopUp } from "../../utils/swal";
-
-type formValues = {
-    name: string;
-    lastname: string;
-    email: string;
-    phone: string;
-    message: string;
-}
+import { FormValues } from "../../types/types";
 
 const Contact = () => {
 
@@ -20,7 +13,7 @@ const Contact = () => {
     const validateForm = async () => {
                             
         const formData = new FormData(formRef.current as HTMLFormElement);
-        const dataOBJ = Object.fromEntries(formData) as formValues;
+        const dataOBJ = Object.fromEntries(formData) as FormValues;
 
         if (dataOBJ.name.trim() !== "" && dataOBJ.email.trim() !== "" && dataOBJ.phone.trim() !== "" && dataOBJ.message.trim() !== "") {
             sendForm(dataOBJ);

@@ -2,13 +2,30 @@
     justify-content: flex-start;
 }
 
-.areasTextCont {
-    width: 35rem;
+.areasInternal_cont {
+    width: 50rem;
     max-width: 100%;
-    align-items: flex-start;
 }
 
-.areasTextCont p {
-    text-align: left;
-    line-height: 1.5;
+.areas_title, .areas_title * {
+    line-height: 1.25;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+} 
+
+.areasList_cont {
+    align-items: flex-start;
+    margin: 1.75rem 0;
+}
+
+.areasList_cont li, .areasInternal_cont p {
+    list-style: disc;
+    font-size: 1.25rem;
+    color: var(--text-dark-color);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.areasInternal_cont p {
+    font-weight: 400;
 }

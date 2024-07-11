@@ -45,8 +45,8 @@ const CarouselZoom = () => {
                 <div className='imgHomeTextCont flex column'>
                     <div className='imgHomeText1Cont flex column'>
                         <div className='flex column'>
-                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo logoAdjust'/>
-                            <p className='imgHomeText1'>Abogados Nación</p>
+                            <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
+                            <p className='imgHomeText1'>Estudio Jurídico De Cillis y Asociados</p>
                         </div>
                         <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
                     </div>
@@ -59,7 +59,7 @@ const CarouselZoom = () => {
                     <div className='imgHomeText1Cont flex column'>
                         <div className='flex column'>
                             <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
-                            <p className='imgHomeText1'>Abogados Nación</p>
+                            <p className='imgHomeText1'>Estudio Jurídico De Cillis y Asociados</p>
                         </div>
                         <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
                     </div>
@@ -72,7 +72,7 @@ const CarouselZoom = () => {
                     <div className='imgHomeText1Cont flex column'>
                         <div className='flex column'>
                             <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
-                            <p className='imgHomeText1'>Abogados Nación</p>
+                            <p className='imgHomeText1'>Estudio Jurídico De Cillis y Asociados</p>
                         </div>
                         <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
                     </div>
@@ -85,7 +85,7 @@ const CarouselZoom = () => {
                     <div className='imgHomeText1Cont flex column'>
                         <div className='flex column'>
                             <img src="/images/logos/logo1.png" alt="Logo" className='imgHomeLogo'/>
-                            <p className='imgHomeText1'>Abogados Nación</p>
+                            <p className='imgHomeText1'>Estudio Jurídico De Cillis y Asociados</p>
                         </div>
                         <img src="/images/assets/line.png" alt="Line" className='imgHomeLine' />
                     </div>

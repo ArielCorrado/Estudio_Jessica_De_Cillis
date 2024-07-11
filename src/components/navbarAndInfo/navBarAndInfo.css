@@ -19,12 +19,8 @@
 }
 
 .logoNavBar {
-    height: 80%;
+    height: 60%;
 }
-
-/* .logoAdjust {
-    filter: saturate(125%) hue-rotate(-10deg);
-} */
 
 .navBarInfo_Info_Cont {
     height: 100%;

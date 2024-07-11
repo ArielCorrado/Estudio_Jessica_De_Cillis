@@ -116,8 +116,8 @@ export default function HomeConcerns() {
     return (
         <div className="homeConcernsCont flex column">
             <img src="/images/concerns/bg.jpg" alt="Background" className="homeConcernsCont_bg"/>
-            <h2 className="homeConcernsCont_title"> <span className="homeConcernsCont_title_color">Lorem ipsum dolor sit,</span> amet consectetur.</h2>
-            <h3 className="homeConcernsCont_subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+            <h2 className="homeConcernsCont_title"> <span className="homeConcernsCont_title_color">La diferencia,</span> la hace contactar a <br /> un profesional experimentado a tiempo.</h2>
+            <h3 className="homeConcernsCont_subtitle">No dudes en comunicarte con nosotros.</h3>
             <div className="homeConcernsCards_cont flex">
                 { cardsInfo.current.map((card) => <HomeConcernsCard imgPath={card.imgPath} mainText={card.mainText} secondaryText={card.secondaryText} key={card.mainText}/>) }
             </div>
