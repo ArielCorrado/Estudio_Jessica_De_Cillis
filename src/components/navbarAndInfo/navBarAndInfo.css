@@ -59,6 +59,10 @@
 
 @media only screen and (orientation: portrait) {
 
+    .logoNavBar {
+        height: 40%;
+    }
+
     .navBarInfo_Cont {
         justify-content: space-between;
         padding: 0 1rem;
