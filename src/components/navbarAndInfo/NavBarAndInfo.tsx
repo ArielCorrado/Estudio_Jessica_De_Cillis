@@ -33,13 +33,13 @@ function NavBarAndInfo () {
                         </div>
                         <p className="navBarInfo_Info_Small_Text">Oficina</p>
                     </div>
-                    <div className="navBar_Info_Contact_Cont flex column">
+                    <a className="navBar_Info_Contact_Cont flex column" href="https://wa.me/+5491159915175" target="_blank" rel="noreferrer">
                         <div className="flex">
                             <img src="/images/icons/phone.png" alt="Contact" className="navBar_icons"/>
                             <p className="navBarInfo_Info_Large_Text">+54 9 11 59915175</p>
                         </div>
                         <p className="navBarInfo_Info_Small_Text">Urgencias 24hs</p>
-                    </div>
+                    </a>
                     <div className="navBar_Info_Networks_Cont flex">
                         <a href="https://www.instagram.com/abogados.nacion/" target="_blank" rel="noreferrer" className="flex">
                             <img src="/images/icons/instagram.png" alt="Instagram icon" className="navBar_icons icon_invert"/>
@@ -47,8 +47,6 @@ function NavBarAndInfo () {
                         <a href="https://www.linkedin.com/in/jessica-gabriela-de-cillis-97418330/" target="_blank" rel="noreferrer" className="flex">
                             <img src="/images/icons/linkedin.png" alt="Linkedin icon" className="navBar_icons icon_invert"/>
                         </a>
-                        {/* <img src="/images/icons/facebook.png" alt="Facebook icon" className="navBar_icons icon_invert"/> */}
-                        {/* <img src="/images/icons/x.png" alt="X icon" className="navBar_icons icon_invert"/> */}
                     </div>
                 </div>
             </div>
