@@ -178,6 +178,7 @@ const NavBar = () => {
         };        
 
         window.addEventListener("resize", () => check());                                        //Manejo de clases al hacer resize o cambio de orientacion
+        window.addEventListener("orientationchange", () => check());
         check();
 
         window.addEventListener("click", (e) => {                                               //Cerramos en menu desplegado al hacer click en cualquier lado menos en el icono de menu
