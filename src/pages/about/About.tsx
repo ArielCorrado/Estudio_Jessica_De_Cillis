@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 export default function About() {
     return (
         <div className="aboutCont paddingSeccions seccionToWaitImages flex column">
+
+            <h2 className="homeConcernsCont_title about_title"> <span className="homeConcernsCont_title_color">Profesionales con amplia experiencia</span></h2>
+            <h3 className="about_subtitle">Máxima seriedad y absoluta discreción con nuestros clientes.</h3>
             
-            <h2 className="homeConcernsCont_title"> <span className="homeConcernsCont_title_color">Lorem ipsum dolor sit,</span> amet consectetur.</h2>
-            <h3 className="homeConcernsCont_subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
-        
             <Link to="/cv/jessica">
                 <HomeTeamCard 
                     imgPath="/images/team/jessica.jpeg" 
                     mainText="JESSICA DE CILLIS" 
-                    secondaryText="Abogada Penalista" 
+                    secondaryText="Abogada Penalista / Socia Fundadora" 
                     imgClass="homeTeamCardJessicaImgClass"
                     contClass="scale105"
                 />  

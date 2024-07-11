@@ -39,6 +39,10 @@
     z-index: -2;
 }
 
+.footerInfoCont > div:last-child {
+    border-right: 1px solid var(--footer-border-lines-color);
+}
+
 .footerSection {
     width: 25%;
     height: 100%;
@@ -240,23 +244,28 @@
 /***************************************************************/
 
 @media only screen and (orientation: portrait) {
-
+  
     .footerCont {
         height: fit-content;
     }
 
     .footerInfoCont {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .footerSection {
         width: 100%;
         height: var(--alto-footer);
         border-top: 1px solid var(--footer-border-lines-color);
+        padding-top: 2rem;
     }
 
     .footerClientsCont {
         align-items: center;
+    }
+
+    .footerLogoAndNetworksCont {
+        height: fit-content;
     }
 }
 
@@ -271,7 +280,7 @@
     }
 
     .footerSection {
-        width: 50%;
+        width: 33.33%;
         height: var(--alto-footer);
         border-top: 1px solid var(--footer-border-lines-color);
     }
@@ -279,4 +288,5 @@
     .footerClientsCont {
         align-items: center;
     }
+
 }

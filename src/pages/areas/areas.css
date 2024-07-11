@@ -29,3 +29,19 @@
 .areasInternal_cont p {
     font-weight: 400;
 }
+
+@media only screen and (orientation:portrait) {
+
+    .areasInternal_cont {
+       align-items: flex-start;
+    }
+
+    .areasList_cont {
+        margin-left: 1.35rem;
+    }
+
+    .areas_title, .areasInternal_cont p {
+        text-align: left;
+    }
+
+}

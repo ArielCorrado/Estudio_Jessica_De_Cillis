@@ -100,7 +100,6 @@
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     border-top: 1px solid var(--navBar-border-lines-color);
-    padding: 1rem 0;
 }
 
 .menuBaja {
@@ -130,12 +129,13 @@
 }
 
 .opcion2 {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     padding-left: 1.5rem;
     width: 100%;
     font-weight: 400;
     justify-content: flex-start;
     font-size: 0.8rem;
+    border-bottom: 1px solid var(--navBar-border-lines-color);
 }
 
 .opcion2:hover {

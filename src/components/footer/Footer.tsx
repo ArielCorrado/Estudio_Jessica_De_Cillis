@@ -129,7 +129,7 @@ export default function Footer () {
                         <button type="button" className="footerSendButton" onClick={validateForm}>Enviar</button>
                     </form>
                 </div>
-                <div className="footerClientsCont footerSection flex column">
+                {/* <div className="footerClientsCont footerSection flex column">
                     <div className="flex">
                         <img src="/images/icons/clients.png" alt="Links" className="footerIconTitles"/>
                         <p className="footerTitles">Nuestros Clientes</p>
@@ -145,10 +145,10 @@ export default function Footer () {
                         <div><p>Cliente 8</p></div>
                         <div><p>Cliente 9</p></div>
                     </div>  
-                </div>
+                </div> */}
             </div>
             <div className="footerCopyRightCont flex">
-                <p className="footer_small_text">Jessica De Cillis Estudio de Abogados © 2024 All rights reserved</p>
+                <p className="footer_small_text">Estudio Jurídico De Cillis y Asociados © 2024 All rights reserved</p>
             </div>
         </div>
     );

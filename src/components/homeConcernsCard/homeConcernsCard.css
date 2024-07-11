@@ -17,7 +17,7 @@
 .homeConcernsCard_textCont {
     position: absolute;
     width: 80%;
-    height: 4rem;
+    min-height: 4.5rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -25,12 +25,14 @@
     transform: translateY(-50%);
     background-color: var(--color-web-1);
     border-bottom: 4px solid var(--color-web-4);
+    padding: 0.5rem 0.25rem;
 }
 
 .homeConcernsCard_mainText {
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
 .homeConcernsCard_secondaryText {

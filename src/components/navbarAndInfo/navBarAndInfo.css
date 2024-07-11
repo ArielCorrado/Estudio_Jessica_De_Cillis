@@ -28,6 +28,7 @@
 
 .navBarInfo_Info_Large_Text {
     font-size: 1rem;
+    width: max-content;
 }
 
 .navBarInfo_Info_Small_Text {
@@ -41,10 +42,6 @@
     align-items: flex-start;
     border-right: 1px solid var(--navBar-border-lines-color);
 }
-
-/* .navBar_Info_Contact_Cont  {
-
-} */
 
 .navBar_Info_Networks_Cont {
     padding: 0 1rem;
@@ -62,11 +59,17 @@
 
 @media only screen and (orientation: portrait) {
 
+    .navBarInfo_Cont {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
     .navBar_Info_Networks_Cont, .navBar_Info_Schedule_Cont {
         display: none;
     }
 
     .navBar_Info_Contact_Cont {
         border-right: none;
+        padding-right: 0;
     }
 }
