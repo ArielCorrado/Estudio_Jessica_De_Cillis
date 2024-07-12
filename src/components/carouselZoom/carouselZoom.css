@@ -86,7 +86,12 @@
     }
 }
 
+@media only screen and (orientation: landscape) and (width < 1200px) {
 
+    .contImgHome {
+        min-height: 100vh;
+    }
 
+}
 
 

@@ -122,5 +122,10 @@
     .homeConcernsCont_bg {
         object-position: right top;
     }
+
+    .homeConcernsCont_title {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
     
 }

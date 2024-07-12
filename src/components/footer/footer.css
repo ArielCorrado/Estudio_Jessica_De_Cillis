@@ -269,24 +269,45 @@
     }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1000px) {
+@media only screen and (orientation: landscape) and (width < 1200px) {
 
     .footerCont {
-        height: fit-content;
+        height: max-content;
     }
 
     .footerInfoCont {
-        flex-wrap: wrap;
+        height: 100%;
+        align-items: flex-start;
     }
 
     .footerSection {
         width: 33.33%;
-        height: var(--alto-footer);
+        height: fit-content;
         border-top: 1px solid var(--footer-border-lines-color);
     }
 
     .footerClientsCont {
         align-items: center;
+    }
+
+    .footerContactCont {
+        height: 13.5rem;
+    }
+
+    .footerForm{
+        height: 100%;
+    }
+
+    .footerForm input, .footerForm textarea {
+        font-size: 13px;
+    }
+
+    .footerLinksListCont a {
+        font-size: 14px;
+    }
+
+    .footerLinksListCont li {
+        margin-bottom: 0.5rem;
     }
 
 }
