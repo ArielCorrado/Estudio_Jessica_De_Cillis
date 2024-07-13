@@ -46,6 +46,15 @@ export default function About() {
                         contClass="homeTeamCard_ScaleDown scale89" 
                     />    
                 </Link>
+                <Link to="/cv/emmanuel">
+                    <HomeTeamCard 
+                        imgPath="/images/team/senna.jpg" 
+                        mainText="EMMANUEL SENNA" 
+                        secondaryText="Abogado" 
+                        imgClass="homeTeamCardMartinImgClass opb" 
+                        contClass="homeTeamCard_ScaleDown scale89" 
+                    />    
+                </Link>
             </div>
         </div>
     );

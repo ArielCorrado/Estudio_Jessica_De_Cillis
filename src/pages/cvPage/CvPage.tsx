@@ -175,10 +175,31 @@ export default function CvPage () {
                 <p className="cvSheetText cvSheetTextBold">Posee amplia experiencia en debates orales y públicos.</p>
             </>,
             imgsrc: "/images/team/camila.png",
+        },
+        emmanuel: {
+            name: "Emmanuel",
+            lastname: "Senna",
+            position: "Abogado",
+            speciality: "Especialización en Derecho Penal.",
+            imgClass: "opc cvSheetSenna_paddingBotton0",
+            text: 
+                <p className="cvSheetTextTitle cvSheetTextTitleLong cvSheetSenna">
+                    Se recibió en la Facultad de Derecho de la UNIVERSIDAD DE BUENOS AIRES en el 2022 y su experiencia laboral es en el Poder Judicial de la Nación desde el año 2004 al 2020 
+                    y desde el 2022 a la actualidad trabaja de manera independiente y en colaboración con el estudio.
+                </p>,
+            imgsrc: "/images/team/senna.jpg",
         }
     };
     
     return (
-        <Cv name={team[name!].name} lastname={team[name!].lastname} position={team[name!].position} speciality={team[name!].speciality} text={team[name!].text} imgsrc={team[name!].imgsrc} imgClass={team[name!].imgClass}/>
+        <Cv 
+            name={team[name!].name} 
+            lastname={team[name!].lastname} 
+            position={team[name!].position} 
+            speciality={team[name!].speciality} 
+            text={team[name!].text} 
+            imgsrc={team[name!].imgsrc} 
+            imgClass={team[name!].imgClass}
+        />
     );
 }

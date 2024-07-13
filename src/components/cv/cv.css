@@ -78,6 +78,7 @@
    padding: 1rem;
    padding-top: 0;
    padding-left: 2rem;
+   padding-bottom: 0;
    text-align: left;
 }
 
@@ -137,7 +138,20 @@
     display: none;
 }
 
+.cvSheetSenna {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.cvSheetSenna_paddingBotton0 {
+    padding-bottom: 0 !important;
+}
+
 @media only screen and (orientation: portrait) {
+
+    .cvCont {
+       align-items: flex-start;
+    }
 
     .cvSheetImg {
         width: 50%;
