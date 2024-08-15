@@ -2,7 +2,7 @@
     $jsonData = file_get_contents('php://input');
     $data = json_decode($jsonData, true);
 
-    $to = 'info@abogadospenalistasar.com.ar';
+    $to = 'info@abogadospenalistasar.com.ar, ariel.corrado27@gmail.com';
     
     $name = utf8_decode($data['name']);
     $lastname = utf8_decode($data['lastname']);
